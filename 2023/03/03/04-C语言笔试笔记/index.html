@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C语言笔试笔记 | 大李</title><meta name="author" content="LYL"><meta name="copyright" content="LYL"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句。    1#define MAX(A,B) (((A)-(B))&gt;&gt;31 ? (B) : (A))   如何输出源文件的标题和目前执行行的行数。 12345int line &#x3D; __LINE__;char *file &#x3D; __FILE__;cout&lt;&lt;&quot;file name is &quot;&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言笔试笔记">
+<meta property="og:url" content="http://example.com/2023/03/03/04-C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AF%95%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="大李">
+<meta property="og:description" content="请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句。    1#define MAX(A,B) (((A)-(B))&gt;&gt;31 ? (B) : (A))   如何输出源文件的标题和目前执行行的行数。 12345int line &#x3D; __LINE__;char *file &#x3D; __FILE__;cout&lt;&lt;&quot;file name is &quot;&amp;l">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://2c67fdf.webp.li/05.jpg">
+<meta property="article:published_time" content="2023-03-03T15:10:48.000Z">
+<meta property="article:modified_time" content="2025-06-26T09:28:32.670Z">
+<meta property="article:author" content="LYL">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2c67fdf.webp.li/05.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/03/04-C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AF%95%E7%AC%94%E8%AE%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C语言笔试笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2025-06-26 17:28:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://picshack.net/ib/8XVgOofzAC.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://2c67fdf.webp.li/05.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="大李"><span class="site-name">大李</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C语言笔试笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-03T15:10:48.000Z" title="发表于 2023-03-03 23:10:48">2023-03-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-06-26T09:28:32.670Z" title="更新于 2025-06-26 17:28:32">2025-06-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C语言笔试笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li>请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句。</li>
+</ol>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(A,B) (((A)-(B))&gt;&gt;31 ? (B) : (A))</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>如何输出源文件的标题和目前执行行的行数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> line = __LINE__;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> *file = __FILE__;</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;<span class="string">&quot;file name is &quot;</span>&lt;&lt;(file)&lt;&lt;<span class="string">&quot;,line is &quot;</span>&lt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>请说出const与#define 相比，有何优点?</p>
+<ul>
+<li>Const作用：定义常量、修饰函数参数、修饰函数返回值三个作用。被const修饰的东西都受到<strong>强制保护</strong>，可以预防意外的变动，能提高程序的健壮性。</li>
+<li>const 常量有数据类型，而宏常量没有数据类型。编译器可以对前者进行<strong>类型安全检查</strong>。而对后者只进行<strong>字符替换</strong>，没有类型安全检查，并且在字符替换可能会产生意料不到的错误。</li>
+<li>有些集成化的调试工具可以对const 常量<strong>进行调试</strong>，但是不能对宏常量进行调试。</li>
+</ul>
+</li>
+<li><p>简述数组与指针的区别？</p>
+<p>（1）数组要么在静态存储区被创建（如全局数组），要么在栈上被创建。指针可以随时指向任意类型的内存块。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a[] = “hello”;</span><br><span class="line">a[<span class="number">0</span>] = ‘X’;</span><br><span class="line"><span class="type">char</span> *p = “world”; <span class="comment">// 注意p 指向常量字符串</span></span><br><span class="line">p[<span class="number">0</span>] = ‘X’; <span class="comment">// 编译器不能发现该错误，运行时错误</span></span><br><span class="line"><span class="comment">//因为常量常量字符串分配在常量区，它的内容不允许被改写。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）用运算符sizeof 可以计算出数组的容量（字节数）。sizeof(p),p 为指针得到的是一个 指针变量的字节		数，而不是p 所指的内存容量。C++&#x2F;C 语言没有办法知道指针所指的内存容量，除非在申请内存时记住		它。注意当数组作为函数的参数进行传递时，该数组自动退化为同类型的指针。</p>
+</li>
+<li><p>switch()的参数类不能为浮点型。</p>
+</li>
+<li><p>列举几种进程的同步机制，并比较其优缺点。<br>原子操作、信号量机制、自旋锁、管程、会合、分布式系统（不懂，没学过）</p>
+</li>
+<li><p>static关键字有下列作用：</p>
+<p>(1) 函数体内static变量的作用范围为该函数体，该变量的内存为静态存储区，并且其值只初始化1次；<br>(2) 在模块内的static全局变量可以被模块内所用函数访问，但不能被模块外其它函数访问；<br>(3) 在模块内的static函数只可被这一模块内的其它函数调用，这个函数的使用范围被限制在声明它的模块内；</p>
+</li>
+<li><p>const关键字有下列作用：</p>
+<p>(1) 欲阻止一个变量被改变，可以使用const关键字。在定义该const变量时，通常需要对它进行初始化，因为以后就没有机会再去改变它了；</p>
+<p>(2) 对指针来说，可以指定指针本身为const，也可以指定指针所指的数据为const，或二者同时指定为const；<br>(3) 在一个函数声明中，const可以修饰形参，表明它是一个输入参数，在函数内部不能改变其值；</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">LYL</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/03/04-C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AF%95%E7%AC%94%E8%AE%B0/">http://example.com/2023/03/03/04-C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AF%95%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">大李</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="post_share"><div class="social-share" data-image="https://2c67fdf.webp.li/05.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/04/05-EmEditor%E7%BC%96%E8%BE%91%E5%99%A8%E6%96%B0%E5%A2%9E%E9%AB%98%E4%BA%AE%E8%A7%84%E5%88%99/" title="EmEditor新增高亮规则"><img class="cover" src="https://picshack.net/ib/BJeVUeQgZs.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">EmEditor新增高亮规则</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/03/03-%E6%8C%87%E5%AF%BC%E6%97%A5%E5%BF%97%E7%AC%AC%E4%B8%80%E5%91%A8/" title="指导日志第一周"><img class="cover" src="https://picshack.net/ib/91jmppa7J9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">指导日志第一周</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://picshack.net/ib/8XVgOofzAC.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LYL</div><div class="author-info__description">我是开源的好朋友</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/helloliyilin"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/helloliyilin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://helloliyilin.gitee.io/" target="_blank" title="博客"><i class="fa-solid fa-blog"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/06/26/31-%E6%89%8B%E6%9C%BAAPP%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE/" title="无题"><img src="https://img1.imgtp.com/2023/09/23/IRduAJs6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/06/26/31-%E6%89%8B%E6%9C%BAAPP%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE/" title="无题">无题</a><time datetime="2025-06-26T09:28:32.683Z" title="发表于 2025-06-26 17:28:32">2025-06-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/12/32-SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" title="SSH本地端口转发"><img src="https://picshack.net/ib/Udc7EoVeWT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SSH本地端口转发"/></a><div class="content"><a class="title" href="/2025/06/12/32-SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" title="SSH本地端口转发">SSH本地端口转发</a><time datetime="2025-06-12T02:03:04.000Z" title="发表于 2025-06-12 10:03:04">2025-06-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/10/30-burp%E5%AE%89%E8%A3%85/" title="30-burp安装"><img src="https://2c67fdf.webp.li/3688eddbb7774a82d7e942f3ec840819.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="30-burp安装"/></a><div class="content"><a class="title" href="/2025/06/10/30-burp%E5%AE%89%E8%A3%85/" title="30-burp安装">30-burp安装</a><time datetime="2025-06-10T02:49:39.000Z" title="发表于 2025-06-10 10:49:39">2025-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/10/29-burp%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%BA%94%E7%94%A8%E5%B1%82%E6%95%B0%E6%8D%AE/" title="burp抓取国密TLCP协议的应用层数据"><img src="https://picshack.net/ib/mSsNNEiXwd.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="burp抓取国密TLCP协议的应用层数据"/></a><div class="content"><a class="title" href="/2025/06/10/29-burp%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%BA%94%E7%94%A8%E5%B1%82%E6%95%B0%E6%8D%AE/" title="burp抓取国密TLCP协议的应用层数据">burp抓取国密TLCP协议的应用层数据</a><time datetime="2025-06-10T02:46:29.000Z" title="发表于 2025-06-10 10:46:29">2025-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/10/serv00%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="serv00服务器"><img src="https://picshack.net/ib/tv5zPt4hLH.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="serv00服务器"/></a><div class="content"><a class="title" href="/2025/01/10/serv00%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="serv00服务器">serv00服务器</a><time datetime="2025-01-10T01:51:27.000Z" title="发表于 2025-01-10 09:51:27">2025-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2025 By LYL</div><div class="footer_custom_text">很高兴认识你😂</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

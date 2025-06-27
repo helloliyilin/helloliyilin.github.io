@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>阿里云服务器ECS搭建个人博客 | 大李</title><meta name="author" content="LYL"><meta name="copyright" content="LYL"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1.登录云服务器在购买ECS服务器后，系统会创建一个ECS实例。每一个ECS实例对应一台已购买的云服务器。您可以通过电脑上自带的终端工具访问云服务器，进行应用部署和环境搭建。  在左侧导航栏，选择实例与镜像&gt;实例。 在顶部菜单栏左上角处，选择实例的所属地域。 在实例页面，找到目标实例，在操作列单击 &gt; 实例属性&gt;重置实例密码，按照界面提示设置ECS实例的登录密码。保存密码后，在弹">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云服务器ECS搭建个人博客">
+<meta property="og:url" content="http://example.com/2023/11/24/16-%E9%98%BF%E9%87%8C%E4%BA%91-%E6%90%AD%E5%BB%BA%E4%BA%91%E4%B8%8A%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="大李">
+<meta property="og:description" content="1.登录云服务器在购买ECS服务器后，系统会创建一个ECS实例。每一个ECS实例对应一台已购买的云服务器。您可以通过电脑上自带的终端工具访问云服务器，进行应用部署和环境搭建。  在左侧导航栏，选择实例与镜像&gt;实例。 在顶部菜单栏左上角处，选择实例的所属地域。 在实例页面，找到目标实例，在操作列单击 &gt; 实例属性&gt;重置实例密码，按照界面提示设置ECS实例的登录密码。保存密码后，在弹">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picshack.net/ib/cDQynoST2d.jpg">
+<meta property="article:published_time" content="2023-11-24T08:22:52.000Z">
+<meta property="article:modified_time" content="2025-06-26T09:28:32.675Z">
+<meta property="article:author" content="LYL">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picshack.net/ib/cDQynoST2d.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/11/24/16-%E9%98%BF%E9%87%8C%E4%BA%91-%E6%90%AD%E5%BB%BA%E4%BA%91%E4%B8%8A%E5%8D%9A%E5%AE%A2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '阿里云服务器ECS搭建个人博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-06-26 17:28:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://picshack.net/ib/8XVgOofzAC.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picshack.net/ib/cDQynoST2d.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="大李"><span class="site-name">大李</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">阿里云服务器ECS搭建个人博客</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-24T08:22:52.000Z" title="发表于 2023-11-24 16:22:52">2023-11-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-06-26T09:28:32.675Z" title="更新于 2025-06-26 17:28:32">2025-06-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="阿里云服务器ECS搭建个人博客"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1-登录云服务器"><a href="#1-登录云服务器" class="headerlink" title="1.登录云服务器"></a>1.登录云服务器</h2><p>在购买ECS服务器后，系统会创建一个ECS实例。每一个ECS实例对应一台已购买的云服务器。您可以通过电脑上自带的终端工具访问云服务器，进行应用部署和环境搭建。</p>
+<ol>
+<li>在左侧导航栏，选择<strong>实例与镜像&gt;实例</strong>。</li>
+<li>在顶部菜单栏左上角处，选择实例的所属地域。</li>
+<li>在<strong>实例</strong>页面，找到目标实例，在操作列单击 <strong>&gt; 实例属性&gt;重置实例密码</strong>，按照界面提示设置ECS实例的登录密码。保存密码后，在弹出的页面，单击<strong>立即重启</strong>使密码生效。</li>
+</ol>
+<p><strong>说明：</strong>实例创建完成大约3~5分钟后，才支持重置实例密码，如不可重置请耐心等待后重试</p>
+<ol start="4">
+<li>单击实例的ID，选择<strong>安全组</strong>页签，单击安全组<strong>操作</strong>列的<strong>配置规则</strong>，在入方向添加需要放行的端口。本教程中，在安全组入方向放行SSH默认22端口、Apache默认80端口。</li>
+<li>远程连接ECS实例。可以使用<code>MobaXterm</code>软件管理。</li>
+</ol>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A81.png" alt="image-20231124161131784"></p>
+<h2 id="2-部署LAMP环境"><a href="#2-部署LAMP环境" class="headerlink" title="2.部署LAMP环境"></a>2.部署LAMP环境</h2><p>L为Linux，A为Apache，M为MySQL，P为PHP</p>
+<ol>
+<li>在ECS服务器上，执行以下命令，安装Apache服务及其扩展包。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd httpd-manual mod_ssl mod_perl</span><br></pre></td></tr></table></figure>
+
+<p>如果回显信息显示Complete!，则表示Apache安装成功。</p>
+<ol start="2">
+<li>执行以下命令，启动Apache服务。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start httpd.service</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>打开浏览器输入ECS服务器的公网IP，如果显示如下图的测试页面表示Apache服务安装成功。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/helloliyilin/picgoimg//img/TB1_cKkdJTfau8jSZFwXXX1mVXa-1920-937.png" alt="img"></p>
+<ol start="4">
+<li>参考以下操作在ECS服务器上搭建一个MySQL数据库。</li>
+</ol>
+<p>执行以下命令，下载并安装MySQL。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line">yum -y install mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line">yum -y install mysql-community-server --nogpgcheck</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A82.png" alt="img"></p>
+<p>执行以下命令，启动MySQL数据库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，查看MySQL运行状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，查看MySQL初始密码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;password&quot; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A83.png" alt="img"></p>
+<p> 执行以下命令，登录数据库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，修改MySQL默认密码。您需要将下面命令中的NewPassWord1.修改为您要设置的数据库密码。新密码设置的时候如果设置的过于简单会报错，必须同时包含大小写英文字母、数字和特殊符号中的三类字符。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;NewPassWord1.&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，创建一个存储博客网站内容的数据库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database wordpress; </span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，查看是否创建成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+<p>输入exit退出数据库。</p>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A84.png" alt="img"></p>
+<ol start="5">
+<li>WordPress是使用PHP语言开发的博客平台。参考以下操作安装PHP。</li>
+</ol>
+<p>执行以下命令，安装PHP。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install php php-mysql gd php-gd gd-devel php-xml php-common php-mbstring php-ldap php-pear php-xmlrpc php-imap</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，创建PHP测试页面。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;&lt;?php phpinfo(); ?&gt;&quot; &gt; /var/www/html/phpinfo.php</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，重启Apache服务。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<p> 打开浏览器，访问http:&#x2F;&#x2F;&lt;ECS公网IP&gt;&#x2F;phpinfo.php，显示如下页面表示PHP安装成功。</p>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A85.png" alt="img"></p>
+<h2 id="3-安装和配置WordPress"><a href="#3-安装和配置WordPress" class="headerlink" title="3. 安装和配置WordPress"></a>3. 安装和配置WordPress</h2><p>完成上述环境搭建后，参考以下操作安装WordPress。</p>
+<p>执行以下命令，安装WordPress。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wordpress</span><br></pre></td></tr></table></figure>
+
+<p>显示如下信息表示安装成功。</p>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A86.png" alt="img"></p>
+<p>修改WordPress配置文件。</p>
+<p>执行以下命令，修改wp-config.php指向路径为绝对路径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 进入/usr/share/wordpress目录。</span><br><span class="line">cd /usr/share/wordpress</span><br><span class="line"># 修改路径。</span><br><span class="line">ln -snf /etc/wordpress/wp-config.php wp-config.php</span><br><span class="line"># 查看修改后的目录结构。</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，移动WordPress到Apache根目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 在Apache的根目录/var/www/html下，创建一个wp-blog文件夹。</span><br><span class="line">mkdir /var/www/html/wp-blog</span><br><span class="line">mv * /var/www/html/wp-blog/</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，修改wp-config.php配置文件。</p>
+<p>database_name_here为之前步骤中创建的数据库名称，本示例为wordpress。</p>
+<p>username_here为MySQL数据库的用户名，本示例为root。</p>
+<p>password_here为MySQL数据库的登录密码，本示例为NewPassWord1.。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/database_name_here/wordpress/&#x27; /var/www/html/wp-blog/wp-config.php</span><br><span class="line">sed -i &#x27;s/username_here/root/&#x27; /var/www/html/wp-blog/wp-config.php</span><br><span class="line">sed -i &#x27;s/password_here/NewPassWord1./&#x27; /var/www/html/wp-blog/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，查看配置文件信息是否修改成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -n /var/www/html/wp-blog/wp-config.php</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A87.png" alt="img"></p>
+<p>执行以下命令，重启Apache服务。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-发布博客"><a href="#4-发布博客" class="headerlink" title="4. 发布博客"></a>4. 发布博客</h2><p>完成WordPress安装后，参考以下操作创建个人站点并发布内容。</p>
+<ol>
+<li><p>打开浏览器并访问http:&#x2F;&#x2F;&lt;ECS公网IP&gt;&#x2F;wp-blog&#x2F;wp-admin&#x2F;install.php。</p>
+</li>
+<li><p>设置您的站点名称、管理员用户名和密码，然后单击Install WordPress完成WordPress初始化。</p>
+</li>
+</ol>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A88.png" alt="img"></p>
+<ol start="3">
+<li>单击 Log In ，输入用户名和密码，然后再次单击Log In打开WordPress站点。</li>
+</ol>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A89.png" alt="img"></p>
+<p>登录后，您就可以根据需要创建内容进行发布了。至此您已完成WordPress的搭建。</p>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A810.png" alt="img"></p>
+<ol start="4">
+<li>您可以单击Write your first blog post，开始编写您的第一篇博客。</li>
+</ol>
+<p><img src="/./../img/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A811.png" alt="img"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">LYL</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/11/24/16-%E9%98%BF%E9%87%8C%E4%BA%91-%E6%90%AD%E5%BB%BA%E4%BA%91%E4%B8%8A%E5%8D%9A%E5%AE%A2/">http://example.com/2023/11/24/16-%E9%98%BF%E9%87%8C%E4%BA%91-%E6%90%AD%E5%BB%BA%E4%BA%91%E4%B8%8A%E5%8D%9A%E5%AE%A2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">大李</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://picshack.net/ib/cDQynoST2d.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/24/15-SM4%E6%9C%BA%E5%AF%86%E6%80%A7%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="SM4机密性使用方法"><img class="cover" src="https://img1.imgtp.com/2023/09/23/Z9XX2RQV.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SM4机密性使用方法</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/20/18-docket%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" title="docket常用命令以及使用"><img class="cover" src="https://picshack.net/ib/413IJBQX7i.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">docket常用命令以及使用</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://picshack.net/ib/8XVgOofzAC.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LYL</div><div class="author-info__description">我是开源的好朋友</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/helloliyilin"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/helloliyilin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://helloliyilin.gitee.io/" target="_blank" title="博客"><i class="fa-solid fa-blog"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%99%BB%E5%BD%95%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">1.登录云服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%83%A8%E7%BD%B2LAMP%E7%8E%AF%E5%A2%83"><span class="toc-text">2.部署LAMP环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEWordPress"><span class="toc-text">3. 安装和配置WordPress</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2"><span class="toc-text">4. 发布博客</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/06/26/31-%E6%89%8B%E6%9C%BAAPP%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE/" title="无题"><img src="https://img1.imgtp.com/2023/09/23/IRduAJs6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/06/26/31-%E6%89%8B%E6%9C%BAAPP%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE/" title="无题">无题</a><time datetime="2025-06-26T09:28:32.683Z" title="发表于 2025-06-26 17:28:32">2025-06-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/12/32-SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" title="SSH本地端口转发"><img src="https://picshack.net/ib/Udc7EoVeWT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SSH本地端口转发"/></a><div class="content"><a class="title" href="/2025/06/12/32-SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" title="SSH本地端口转发">SSH本地端口转发</a><time datetime="2025-06-12T02:03:04.000Z" title="发表于 2025-06-12 10:03:04">2025-06-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/10/30-burp%E5%AE%89%E8%A3%85/" title="30-burp安装"><img src="https://2c67fdf.webp.li/3688eddbb7774a82d7e942f3ec840819.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="30-burp安装"/></a><div class="content"><a class="title" href="/2025/06/10/30-burp%E5%AE%89%E8%A3%85/" title="30-burp安装">30-burp安装</a><time datetime="2025-06-10T02:49:39.000Z" title="发表于 2025-06-10 10:49:39">2025-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/10/29-burp%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%BA%94%E7%94%A8%E5%B1%82%E6%95%B0%E6%8D%AE/" title="burp抓取国密TLCP协议的应用层数据"><img src="https://picshack.net/ib/mSsNNEiXwd.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="burp抓取国密TLCP协议的应用层数据"/></a><div class="content"><a class="title" href="/2025/06/10/29-burp%E6%8A%93%E5%8F%96%E5%9B%BD%E5%AF%86TLCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%BA%94%E7%94%A8%E5%B1%82%E6%95%B0%E6%8D%AE/" title="burp抓取国密TLCP协议的应用层数据">burp抓取国密TLCP协议的应用层数据</a><time datetime="2025-06-10T02:46:29.000Z" title="发表于 2025-06-10 10:46:29">2025-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/10/serv00%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="serv00服务器"><img src="https://picshack.net/ib/tv5zPt4hLH.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="serv00服务器"/></a><div class="content"><a class="title" href="/2025/01/10/serv00%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="serv00服务器">serv00服务器</a><time datetime="2025-01-10T01:51:27.000Z" title="发表于 2025-01-10 09:51:27">2025-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2025 By LYL</div><div class="footer_custom_text">很高兴认识你😂</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
